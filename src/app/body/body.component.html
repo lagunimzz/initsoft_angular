@@ -1,0 +1,57 @@
+<!-- {{ myPet | json }} -->
+<!-- <br />
+<br />
+{{ myPet.name }}
+{{ myPet.age }}
+{{ myPet.birthDate }}
+{{ myPet.canSwim }}
+<br />
+<ul>
+  angularjs => ng-for
+  <li *ngFor="let item of myPets">
+    {{ item.name }}
+    {{ item.age }}
+    {{ item.birthDate }}
+    {{ item.weight }}
+    {{ item.canSwim }}
+  </li>
+</ul> -->
+<br />
+<!-- angular js => ng-model -->
+<!-- (ngModel) => One way Binding -->
+<!-- [(ngModel)] => Two way Binding -->
+{{ name }}
+ชื่อ: <input name="name" [(ngModel)]="name" /> <br />
+อายุ: <input type="range" name="age" [(ngModel)]="age" /> {{ age }} <br />
+วันเกิด: <input type="date" name="birthDate" [(ngModel)]="birthDate" /> <br />
+น้ำหนัก: <input type="number" name="weight" [(ngModel)]="weight" /> <br />
+ประเภท: <input name="type" [(ngModel)]="type" /> <br />
+ว่ายน้ำ: <input type="checkbox" name="canSwim" [(ngModel)]="canSwim" /> <br />
+<!-- angularjs => ng-click -->
+<button (click)="onSave()">save</button>
+<table border="1">
+  <thead>
+    <th>ชื่อ</th>
+    <th>อายุ</th>
+    <th>วันเกิด</th>
+    <th>น้ำหนัก</th>
+    <th>ประเภท</th>
+    <th>ว่ายน้ำ</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of myPets">
+      <td>{{ item.name }}</td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.birthDate | date: "dd/MM/YYYY" }}</td>
+      <td>{{ item.weight | number: "0.1-2" }}</td>
+      <!-- angular js => ng-if -->
+      <!-- <td *ngIf="item.canSwim === true">ได้</td>
+      <td *ngIf="item.canSwim === false">ไม่ได้</td>
+
+      <td *ngIf="item.canSwim">ได้</td>
+      <td *ngIf="!item.canSwim">ไม่ได้</td> -->
+      <td>{{ item.type }}</td>
+      <td>{{ item.canSwim ? "ได้" : "ไม่ได้" }}</td>
+    </tr>
+  </tbody>
+</table>
