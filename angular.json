@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ex2"
+  "defaultProject": "ex2",
+  "cli": {
+    "analytics": "faf645ec-67a1-4ddf-a5fd-11031ee90de4"
+  }
 }
