@@ -54,6 +54,11 @@ export class BodyComponent implements OnInit, OnDestroy, OnChanges {
     alert('saved!!');
   }
 
+  delete(index: number): void {
+    // console.log(this.myPets.slice(0, index));
+    this.myPets.splice(index, 1);
+  }
+
   ngOnChanges(): void {
     console.log('on change');
   }
