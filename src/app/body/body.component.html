@@ -28,7 +28,7 @@
 น้ำหนัก: <input type="number" name="weight" [(ngModel)]="weight" /> <br />
 ประเภท:
 <!-- <input name="type" [(ngModel)]="type" /> -->
-<select>
+<select name="type" [(ngModel)]="type">
   <option *ngFor="let item of types">{{ item }}</option>
 </select>
 <br />
