@@ -19,7 +19,7 @@ export class BodyComponent implements OnInit, OnDestroy, OnChanges {
     weight: 17,
   };
   myPets: Pet[] = [];
-
+  types = ['ชิสุ', 'ปลั๊ก', 'โกเด้น', 'สามสี', 'ขาวมนี'];
   name = '';
   age = 0;
   weight = 0;

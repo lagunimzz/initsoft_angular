@@ -22,10 +22,17 @@
 <!-- [(ngModel)] => Two way Binding -->
 {{ name }}
 ชื่อ: <input name="name" [(ngModel)]="name" /> <br />
-อายุ: <input type="range" name="age" [(ngModel)]="age" /> {{ age }} <br />
+อายุ: <input type="range" name="age" [(ngModel)]="age" /> {{ age }}
+<br />
 วันเกิด: <input type="date" name="birthDate" [(ngModel)]="birthDate" /> <br />
 น้ำหนัก: <input type="number" name="weight" [(ngModel)]="weight" /> <br />
-ประเภท: <input name="type" [(ngModel)]="type" /> <br />
+ประเภท:
+<!-- <input name="type" [(ngModel)]="type" /> -->
+<select>
+  <option *ngFor="let item of types">{{ item }}</option>
+</select>
+<br />
+
 ว่ายน้ำ: <input type="checkbox" name="canSwim" [(ngModel)]="canSwim" /> <br />
 <!-- angularjs => ng-click -->
 <button (click)="onSave()">save</button>
